@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Test</title>
+<style>
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  background: #e91e63;
+  transform: rotate(-45deg);
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  background: #e91e63;
+  border-radius: 50px 50px 0 0;
+  left: 50px;
+}
+
+.heart:before {
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  color: white;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="heart">
+  <div class="text">Iya</div>
+</div>
+</body>
+</html>
